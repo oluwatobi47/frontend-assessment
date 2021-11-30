@@ -5,7 +5,7 @@ As part of our application process, we'd like to see what you can produce by giv
 Implement the dashboard design as seen on this Figma board (https://www.figma.com/file/fzXDrdFJQ43222TDTND99E/Dashboard-(Community)?node-id=0%3A1).
 
 ## About the Design:
-It a single-paged dashboard that prioritizes graph-driven metrics with a dark mode feature.
+It is a single-paged dashboard that prioritizes graph-driven metrics with a dark mode feature.
 
 ## Basic Requirement:
 - Using dummy values for the graph x and y cordinates, the graph should be interactive and show point metrics as seen on the design
