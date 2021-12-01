@@ -16,7 +16,7 @@ You'll be assessed based on but not limited to the following:
 - Design implementation
 - Coding pattern
 
-You can use any language or framework of your choice, but we'd prefer you use either React or Vue.
+You can use any language or framework of your choice, but we'd prefer you use either React or Vue. Just make sure you create your own branch where your code is committed in this repository.
 
 To complete your homework, please fork this repo and commit your work to your fork and when you're done, send relevant details to engineering@shuttlers.ng
 You can reach out to david.jaiyeola@shuttlers.ng if you have any questions.
