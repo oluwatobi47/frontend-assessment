@@ -1,5 +1,5 @@
 # frontend-assessment
-As part of our application process, we'd like to see what you can produce by giving you a take homw assessment.
+As part of our application process, we'd like to see what you can produce by giving you a take home assessment.
 
 # Test Specification
 Implement the dashboard design as seen on this Figma board (https://www.figma.com/file/fzXDrdFJQ43222TDTND99E/Dashboard-(Community)?node-id=0%3A1).
