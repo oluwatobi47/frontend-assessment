@@ -1,0 +1,74 @@
+
+<div class="dashboard-wrapper">
+  <div class="content-area">
+    <div class="row">
+      <div class="breadcrumb">
+        <p class="text-uppercase"><span class="txt-primary">Dashboard</span> <span class="breadcrumb-caret"> > </span> <span class="text-grey">{{activeMenu?.label}}</span></p>
+      </div>
+
+      <div class="menu-data">
+        <h3 class="menu"><img class="icon" [src]="activeMenu?.icon">{{activeMenu?.value}} <span class="add"><span class="icon-svg" [inlineSVG]="'/assets/icons/plus.svg'"></span></span></h3>
+      </div>
+    </div>
+
+    <ng-container *ngIf="dashboardData; else noDataTemplate">
+      <div class="col-12 top-content">
+        <label class="title">Total Visits <app-hint-tooltip></app-hint-tooltip></label>
+        <div class="d-inline-block">
+          <span class="text-grey me-1">Provisions Month</span>
+          <select [(ngModel)]="selectedMonth" class="calendar-select" (ngModelChange)="onMonthChanged()">
+            <option *ngFor="let option of dashboardData.activeMonths" [value]="option.key">{{option.value}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <app-data-line-chart *ngIf="dashboardData" [data]="selectedMonthData"></app-data-line-chart>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6 col-12">
+          <h4 class="title">Perpetual <app-hint-tooltip></app-hint-tooltip></h4>
+          <app-data-pie-chart *ngIf="dashboardData" [data]="selectedMonthData"></app-data-pie-chart>
+        </div>
+        <div class="col-md-6 col-12">
+          <h5 class="title">Active Percentage <app-hint-tooltip></app-hint-tooltip></h5>
+          <div>
+            <p>{{(selectedMonthData?.summary?.activeUsers + selectedMonthData?.summary?.inActiveUsers) | number}} <span>Total</span></p>
+
+            <div class="progress">
+              <div class="bar">
+                <div class="fill" [style.width.%]="getProgress()">
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="legend">
+                <span class="indicator indicator--active"></span>
+                <div>
+                  <p class="label">Active</p>
+                  <p>{{selectedMonthData?.summary?.activeUsers | number}} Users</p>
+                </div>
+              </div>
+
+              <div class="legend">
+                <span class="indicator indicator--inactive"></span>
+                <div>
+                  <p class="label">Inactive</p>
+                  <p>{{selectedMonthData?.summary?.inActiveUsers | number}} Users</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #noDataTemplate>
+      <p>No data available for selected option</p>
+    </ng-template>
+
+  </div>
+
+  <div class="sideinfo">
+    <app-right-panel></app-right-panel>
+  </div>
+</div>

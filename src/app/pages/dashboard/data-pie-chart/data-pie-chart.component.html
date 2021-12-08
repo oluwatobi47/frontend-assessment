@@ -1,0 +1,37 @@
+<div class="doughnut-chart-widget">
+  <div class="chart">
+    <canvas baseChart
+            [data]="pieChartData"
+            [type]="pieChartType"
+            [plugins]="doughnutChartPlugins"
+            [options]="pieChartOptions">
+    </canvas>
+  </div>
+
+  <div class="legends">
+    <div class="legend">
+      <span class="indicator indicator--active"></span>
+      <div>
+        <p class="label">Active Users</p>
+        <p>{{data?.summary?.activeUsers | number}}</p>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span class="indicator indicator--frequent"></span>
+      <div>
+        <p class="label">Frequent Users</p>
+        <p>{{data?.summary?.frequentUsers | number}}</p>
+      </div>
+    </div>
+    <div class="legend">
+      <span class="indicator indicator--inactive"></span>
+      <div>
+        <p class="label">InActive Users</p>
+        <p>{{data?.summary?.inActiveUsers | number}}</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>

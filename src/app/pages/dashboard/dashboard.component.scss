@@ -1,0 +1,135 @@
+@mixin element-color($color) {
+  background: var(--background-el-sec) url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.75 3.50004C1.75 2.85571 2.27233 2.33337 2.91667 2.33337H11.0833C11.7277 2.33337 12.25 2.85571 12.25 3.50004V11.6667C12.25 12.311 11.7277 12.8334 11.0833 12.8334H2.91667C2.27233 12.8334 1.75 12.311 1.75 11.6667V3.50004Z' stroke='#{$color}' stroke-opacity='0.87' stroke-width='1.16667' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9.3335 1.16663V3.49996' stroke='#{$color}' stroke-opacity='0.87' stroke-width='1.16667' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.6665 1.16663V3.49996' stroke='#{$color}' stroke-opacity='0.87' stroke-width='1.16667' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.75 5.83337H12.25' stroke='#{$color}' stroke-opacity='0.87' stroke-width='1.16667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat 95%;
+  //background-image: url('data:image/svg+xml;utf8,<svg ...><g stroke="#{$color}" ... /></g></svg>');
+}
+
+:host{
+  width: 100%;
+
+  .dashboard-wrapper {
+    width: 100%;
+    display: flex;
+    max-height: calc(100vh - 5rem);
+    height: 100%;
+    overflow-y: auto;
+
+
+
+    .content-area {
+      width: 70%;
+      padding: 2.125rem;
+
+
+
+      .calendar-select {
+        border: 1px solid rgba(var(--rgb-primary), 0.2);
+        //@include element-color(var(--asset-color));
+        background: var(--background-el-sec) url("/assets/icons/calendar.svg") no-repeat 95%;
+        border-radius: 0.25rem;
+        padding: 0.1rem 0.5rem;
+        color: var(--text-color);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        width: auto;
+        min-width: 10rem;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .top-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2rem 0;
+      }
+
+      .menu-data {
+        .menu {
+          display: flex;
+          align-items: center;
+          .icon {
+            margin-right: 1rem;
+            height: 2.5rem;
+            width: 2.5rem;
+          }
+
+          .add {
+            background: var(--background-el-tet);
+            border-radius: 50%;
+            height: 3.125rem;
+            width: 3.125rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1rem;
+            .icon-svg {
+              height: 100%;
+              display: flex;
+              align-items: center;
+              ::ng-deep svg {
+                path {
+                  fill: var(--asset-color);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .progress {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        margin: 1rem 0;
+
+        .bar {
+          position: absolute;
+          top: -0.625rem;
+          left: 0;
+          background-color: rgba(var(--rgb-primary), 0.2);
+          width: 100%;
+          height: 0.9375rem;
+          border-radius: 6.25rem;
+          overflow: hidden;
+
+          .fill {
+            background-color: var(--primary);
+            display: block;
+            border-radius: 6.25rem;
+            height: 100%;
+            transition: all ease-in .7s;
+          }
+        }
+      }
+
+      .breadcrumb {
+        .breadcrumb-caret {
+          transform: translateY( -2px);
+          height: 100%;
+          display: inline-block;
+          color: #D0D1D2;
+          margin: 0 5px;
+          font-weight: 500;
+        }
+      }
+
+
+    }
+
+    .sideinfo {
+      padding: 2.125rem;
+      width: 30%;
+      height: 100%;
+      background-color: var(--background);
+    }
+  }
+}

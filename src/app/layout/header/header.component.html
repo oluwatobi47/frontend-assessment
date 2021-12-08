@@ -1,0 +1,30 @@
+<header class="nav-wrapper app-header">
+  <nav class="nav">
+    <div class="left">
+      <div class="links">
+        <span class="pg-link" routerLink="/dashboard" [routerLinkActive]="'pg-link--active'">
+          <a class="link">Dashboard</a>
+        </span>
+        <span class="pg-link" routerLink="/sample-page" [routerLinkActive]="'pg-link--active'">
+          <a  class="link">Sample Page</a>
+        </span>
+        <span class="pg-link" title="Dummy label">
+          <a  class="link">Events</a>
+        </span>
+      </div>
+      <div class="search-container">
+        <div class="search">
+          <img src="assets/icons/search.svg">
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="links">
+        <span class="link profile-name">{{user?.userName}}</span>
+        <span class="link"><img class="profile-photo" [src]="user?.userPhoto"></span>
+        <span class="link theme-toggle" title="Click to toggle theme" (click)="toggleTheme()"><img [src]="activeTheme.name == 'light' ? '/assets/icons/moon.svg' : '/assets/icons/sun.svg'"></span>
+      </div>
+    </div>
+  </nav>
+</header>

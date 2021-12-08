@@ -1,0 +1,37 @@
+<div class="extras-panel">
+  <div class="showcase-section">
+    <h4 class="title">Superiority</h4>
+    <img class="banner-img" src="/assets/images/dashboard.svg">
+    <p class="link"><span><img src="/assets/icons/link.svg"></span> Social Trading Platform</p>
+  </div>
+
+  <div class="trading-section">
+    <div class="content">
+      <div *ngFor="let item of tradingOptions" class="trading-item">
+        <div class="stock-img">
+          <img [src]="item.icon">
+        </div>
+        <div class="detail">
+          <p class="label">Stock trading</p>
+          <p class="detail-text">{{item.name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="income-section mt-5">
+    <h4 class="title">My income<app-hint-tooltip></app-hint-tooltip></h4>
+    <div class="income">
+      <div class="percentage-container">
+        <canvas baseChart
+                [data]="pieChartData"
+                [type]="pieChartType"
+                [plugins]="doughnutChartPlugins"
+                [options]="pieChartOptions" id="chart" #chart>
+        </canvas>
+      </div>
+
+      <p class="increase">Increase <span class="txt-primary">+{{incomeData.percentageIncrease}}%</span></p>
+    </div>
+  </div>
+</div>

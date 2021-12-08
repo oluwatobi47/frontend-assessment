@@ -1,0 +1,106 @@
+
+/*@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}*/
+
+:host{
+  width: 100%;
+  .extras-panel {
+    padding: 0 2.125rem;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .showcase-section {
+
+      .banner-img {
+        box-shadow: 0px 8px 8px rgba(var(--rgb-primary),0.08), 0px 8px 16px rgba(var(--rgb-primary),0.06);
+        border-radius: 1.25rem;
+        width: 100%;
+      }
+
+      .link{
+        color: var(--primary);
+        margin-top: 1rem;
+      }
+    }
+
+    .trading-section {
+      .content {
+        background: var(--background-el-sec);
+        //box-shadow: 0px 8px 8px rgba(var(--rgb-primary),0.08), 0px 8px 16px rgba(var(--rgb-primary),0.06);
+        box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+        border-radius: 1.25rem;
+
+        .trading-item {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+          flex: 5;
+
+          &:not(:last-of-type) {
+            .detail{
+              border-bottom: 1px solid var(--text-color-light);
+            }
+          }
+          .stock-img {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              height: 3rem;
+              width: 3rem;
+            }
+          }
+
+          .detail {
+            flex: 3;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            margin-bottom: 0;
+            .label {
+              color: var(--text-color-light);
+              margin-top: 1rem;
+              margin-bottom: 0;
+            }
+            .detail-text {
+
+            }
+          }
+        }
+      }
+    }
+
+    .income-section{
+      .income {
+        background: var(--background-el-sec);
+        box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+        //border-radius: 20px;
+        height: 5rem;
+        border-radius: 0.480769375rem;
+        padding: 0 .5rem 0 2.5rem;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        .percentage-container {
+          background: var(--background-el-sec);
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%;
+          transform: scale(1.5) translateY(0%);
+        }
+
+        .increase {
+          font-weight: 300;
+          margin: 0 0 0 2rem;
+        }
+      }
+    }
+  }
+}

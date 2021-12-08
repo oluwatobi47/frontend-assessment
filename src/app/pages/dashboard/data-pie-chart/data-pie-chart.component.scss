@@ -1,0 +1,16 @@
+.doughnut-chart-widget {
+  display: flex;
+
+  .chart {
+    width: 12.5rem;
+    height: 12.5rem;
+  }
+
+  .legends {
+    margin-left: 1rem;
+    .label {
+      color: var(--text-color-light);
+    }
+  }
+}
+

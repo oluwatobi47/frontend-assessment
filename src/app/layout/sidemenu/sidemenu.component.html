@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <div class="sidebar__toggle">
+    <img src="assets/icons/nav_open.svg">
+    <div class="border-section border-section--bottom"></div>
+  </div>
+  <div class="sidebar__content">
+    <div class="sidebar-menus">
+      <ul>
+        <li *ngFor="let menu of sideMenus" (click)="navigateToPage(menu)">
+          <img [alt]="menu.label" class="" [src]="menu.icon">
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-options">
+      <div class="options-wrapper">
+        <ul>
+          <li *ngFor="let option of options" [ngClass]="{'active': selectedOption == option.label}" (click)="setSelectedOption(option.label)">
+            <span [inlineSVG]="option.icon" class="img"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-section border-section--bottom"></div>
+  </div>
+  <div class="sidebar__footer">
+    <div class="message-wrapper icon-svg">
+      <span inlineSVG="assets/icons/message.svg"></span>
+    </div>
+  </div>
+</div>
