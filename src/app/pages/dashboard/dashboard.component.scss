@@ -13,14 +13,16 @@
     height: 100%;
     overflow-y: auto;
 
-
-
     .content-area {
       width: 70%;
       padding: 2.125rem;
       height: fit-content;
-      //height: 100%;
 
+      .total {
+        font-size: 1.875rem;
+        font-weight: bold;
+        line-height: 2.875rem;
+      }
 
       .calendar-select {
         border: 1px solid rgba(var(--rgb-primary), 0.2);

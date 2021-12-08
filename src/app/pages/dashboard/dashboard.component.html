@@ -26,13 +26,13 @@
       </div>
       <div class="row mt-5">
         <div class="col-md-6 col-12">
-          <h4 class="title">Perpetual <app-hint-tooltip></app-hint-tooltip></h4>
+          <h4 class="title mb-3">Perpetual <app-hint-tooltip></app-hint-tooltip></h4>
           <app-data-pie-chart *ngIf="dashboardData" [data]="selectedMonthData"></app-data-pie-chart>
         </div>
         <div class="col-md-6 col-12">
-          <h5 class="title">Active Percentage <app-hint-tooltip></app-hint-tooltip></h5>
+          <h5 class="title mb-3">Active Percentage <app-hint-tooltip></app-hint-tooltip></h5>
           <div>
-            <p>{{(selectedMonthData?.summary?.activeUsers + selectedMonthData?.summary?.inActiveUsers) | number}} <span>Total</span></p>
+            <p> <span class="total">{{(selectedMonthData?.summary?.activeUsers + selectedMonthData?.summary?.inActiveUsers) | number}}</span> <span class="text-grey">Total</span></p>
 
             <div class="progress">
               <div class="bar">
