@@ -91,13 +91,15 @@ export class DataPieChartComponent implements OnInit, OnChanges {
         // Draw text in center
 
         // ctx.font = fontSizeToUse + 'px Arial';
-        ctx.font = '25px DINPro-Medium'
+        ctx.font = '25px Source Sans Pro';
+        ctx.fontWeight = 600;
         ctx.fillStyle = that.activeTheme.themeColors['--text-color'];
         ctx.fillText(`${formattedNumber(total)}`, centerX, centerY - 10);
 
-        ctx.font = '15px DINPro-Medium'
+        ctx.font = '15px Source Sans Pro';
+        ctx.fontWeight = 400;
         ctx.fillStyle = that.activeTheme.themeColors['--text-color-light'];
-        ctx.fillText('Total', centerX, centerY + 10);
+        ctx.fillText('Total', centerX, centerY + 15);
 
       }
     }];

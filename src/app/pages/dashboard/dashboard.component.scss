@@ -18,7 +18,8 @@
     .content-area {
       width: 70%;
       padding: 2.125rem;
-
+      height: fit-content;
+      //height: 100%;
 
 
       .calendar-select {
@@ -128,7 +129,8 @@
     .sideinfo {
       padding: 2.125rem;
       width: 30%;
-      height: 100%;
+      height: fit-content;
+      //height: 100%;
       background-color: var(--background);
     }
   }
