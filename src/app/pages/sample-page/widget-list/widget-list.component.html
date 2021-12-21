@@ -1,0 +1,7 @@
+<div class="address-list-container">
+  <app-widget-list-item *ngFor="let option of addressList"
+                        (addressSelected)="handleAddressSelection($event)"
+                        [address]="option">
+
+  </app-widget-list-item>
+</div>

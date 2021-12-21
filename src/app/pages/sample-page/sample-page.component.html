@@ -1,3 +1,30 @@
 <div class="mt-5 txt-primary">
-  Sample Page to Hold some other data
+  <div class="widget-container">
+    <app-widget-header></app-widget-header>
+    <div class="widget-content">
+      <div class="section-padded">
+        <div class="widget-form">
+          <div class="control-icons">
+            <img class="start" src="/assets/icons/current_loc.svg">
+            <img class="track" src="/assets/icons/sample/track.svg">
+            <img class="destination" src="/assets/icons/destination_loc.svg">
+          </div>
+          <form novalidate>
+            <input type="text" autocomplete="off" autofocus class="input-control" placeholder="Your location" name="currentLocation" [(ngModel)]="form.currentLocation">
+            <input type="text" autocomplete="off" class="input-control" placeholder="Where to ?" name="destination" [(ngModel)]="form.destination">
+          </form>
+        </div>
+      </div>
+
+      <div class="trip-type">
+        <app-trip-type icon="/assets/icons/sample/home.svg" title="Home"></app-trip-type>
+        <app-trip-type icon="/assets/icons/sample/work.svg" title="Work"></app-trip-type>
+      </div>
+      <app-widget-list [addressList]="sampleAddressData" (addressSelected)="handleAddressSelection($event)"></app-widget-list>
+      <div class="section-padded">
+        <button class="find-btn">Find Trips</button>
+      </div>
+    </div>
+
+  </div>
 </div>

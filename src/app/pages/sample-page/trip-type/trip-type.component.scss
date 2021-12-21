@@ -1,0 +1,35 @@
+$bg-color: #444854;
+$label-color: #EFF2F7;
+.trip-type-wrapper {
+
+  padding: 0.875rem 0.875rem 0.875rem 0;
+  display: flex;
+  align-items: center;
+
+  .content {
+    display: flex;
+    border-radius: 2rem;
+    background: $bg-color;
+    align-items: center;
+    padding: 0.875rem;
+
+    &__icon {
+      height: 1.125rem;
+      width: 1.125rem;
+      margin-right: 1rem;
+    }
+
+    &__label {
+      color: $label-color;
+    }
+  }
+
+  .selector {
+    margin-left: 1rem;
+    img {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+
+}

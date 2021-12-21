@@ -1,0 +1,85 @@
+$bg-color: #000005;
+$border-color: #444854;
+$placeholder-clr: #6E717C;
+$bg2-color: #1A1A20;
+$btn-bg: #E5E5E5;
+$primary: #20E682;
+$text-color1: #ffffff;
+
+.widget-container {
+  width: 23.4375rem;
+  margin: 0 auto;
+  background: $bg-color;
+  border-radius: 0.5rem;
+
+  .widget-content {
+    .section-padded {
+      padding: 1.25rem;
+    }
+    .widget-form {
+      border: 1px solid $border-color;
+      padding: 16px 0 16px 16px;
+      border-radius: 8px;
+      display: flex;
+      .control-icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .start, .destination {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+
+        .track {
+          height: 1rem;
+        }
+      }
+
+      form {
+        margin: 0;
+      }
+      .input-control {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        background: transparent;
+        padding: 1rem;
+        outline: none;
+        width: 100%;
+        border: none;
+        color: $text-color1;
+        caret-color: $primary;
+        &::placeholder {
+          color: $placeholder-clr;
+          font-weight: 500;
+        }
+        &:first-of-type {
+          padding-top: 0;
+          border-bottom: 1px solid $border-color;
+        }
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .trip-type {
+      background: $bg2-color;
+      padding: 1rem 1.25rem;
+      display: flex;
+    }
+
+    .find-btn {
+      background: $btn-bg;
+      color: #ffffff;
+      width: 100%;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      outline: none;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+
+}

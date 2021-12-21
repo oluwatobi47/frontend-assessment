@@ -50,6 +50,11 @@ html,body {
     width: calc(100% - 5rem);
   }
 
+  .app-content {
+    overflow-y: auto;
+    height: calc(100vh - 5.125rem);
+  }
+
   .app-sidemenu {
     background-color: var(--background-el-sec);
     width: 5rem;
@@ -100,5 +105,9 @@ html,body {
         stroke: var(--asset-color);
       }
     }
+  }
+
+  .pointer {
+    cursor: pointer;
   }
 }

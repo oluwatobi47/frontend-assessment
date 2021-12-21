@@ -1,0 +1,39 @@
+$text-color1:#ffffff;
+$text-color2:#6E717C;
+:host {
+  width: 100%;
+  .address {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+
+    &:hover {
+      background: #efefef20;
+      border-radius: 0.5rem;
+    }
+
+    &__marker {
+      width: 1rem;
+      height: 1.125rem;
+      margin-right: 1rem;
+    }
+
+    &__detail {
+      .addr {
+        font-size: 0.75rem;
+        margin: 0;
+        line-height: 1.25rem;
+      }
+
+      .line1 {
+        font-weight: 500;
+        color: $text-color1;
+      }
+
+      .line2 {
+        font-weight: normal;
+        color: $text-color2;
+      }
+    }
+  }
+}
